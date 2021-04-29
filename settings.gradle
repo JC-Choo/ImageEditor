@@ -1,3 +1,4 @@
+include ':custom_gallery'
 include ':core'
 include ':app'
 rootProject.name = "ImageEditor"

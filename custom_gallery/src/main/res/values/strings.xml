@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">커스텀 갤러리</string>
+
+    <string name="all_album">모든 앨범</string>
+    <string name="all_picture">모든 사진</string>
+
+    <string name="check_box">체크박스</string>
+    <string name="thumbnail">썸네일</string>
+
+    <string name="msg_selected_item">선택한 아이템들이 있습니다. 나가시겠습니까?</string>
+    <string name="msg_item_count_3">3개까지 선택 가능헙나다.</string>
+</resources>
