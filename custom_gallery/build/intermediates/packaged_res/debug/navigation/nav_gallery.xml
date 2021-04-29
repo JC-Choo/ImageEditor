@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="dev.chu.custom_gallery.ui.main.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_main_to_folder"
+            app:destination="@id/folder" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/folder"
+        android:name="dev.chu.custom_gallery.ui.folder.FolderFragment"
+        android:label="Folder"
+        tools:layout="@layout/fragment_folder" />
+    <fragment android:id="@+id/placeholder" />
+</navigation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="black_a50">#80000000</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_888888">#888888</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_a50">#80FFFFFF</color>
+    <string name="all_album">모든 앨범</string>
+    <string name="all_picture">모든 사진</string>
+    <string name="app_name">커스텀 갤러리</string>
+    <string name="check_box">체크박스</string>
+    <string name="msg_item_count_3">3개까지 선택 가능헙나다.</string>
+    <string name="msg_selected_item">선택한 아이템들이 있습니다. 나가시겠습니까?</string>
+    <string name="thumbnail">썸네일</string>
+    <style name="Theme.ImageEditor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
