@@ -3,6 +3,7 @@ package dev.chu.imageeditor
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import dev.chu.custom_gallery.entity.Media
 import dev.chu.imageeditor.databinding.ItemViewBinding
 
 class MainAdapter(

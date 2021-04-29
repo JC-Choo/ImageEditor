@@ -25,3 +25,10 @@ fun setImageDrawable(view: ImageView, uri: Uri) {
 fun setVisible(view: View, visible: Boolean?) {
     view.visibility = if (visible == true) View.VISIBLE else View.GONE
 }
+
+@BindingAdapter("onClickEvent")
+fun onClickEvent(view: View, clickEvent: View.OnClickListener?) {
+    if (clickEvent != null) {
+        view.setOnClickListener(clickEvent)
+    }
+}

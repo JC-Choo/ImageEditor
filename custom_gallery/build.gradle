@@ -11,7 +11,6 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "dev.chu.custom_gallery"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -43,15 +42,18 @@ android {
 
 dependencies {
 
+    implementation project(':core')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    // 참고 https://developer.android.com/kotlin/ktx?hl=ko
-    implementation "androidx.core:core-ktx:$core_ktx_version"               // Android 프레임워크의 일부인 일반 라이브러리에 확장 프로그램을 제공
-    implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso_version"
+
+    // 참고 https://developer.android.com/kotlin/ktx?hl=ko
+    implementation "androidx.core:core-ktx:$core_ktx_version"               // Android 프레임워크의 일부인 일반 라이브러리에 확장 프로그램을 제공
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
 
     implementation "androidx.activity:activity-ktx:$activity_ktx_version"       // 액티비티 API 를 단순화한 것들을 적용하기 위한 라이브러리.
     implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"       // 프래그먼트 API 를 단순화한 것들을 적용하기 위한 라이브러리.

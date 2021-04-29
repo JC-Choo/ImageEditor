@@ -8,9 +8,9 @@
         tools:ignore="ScopedStorage" />
 
     <application android:name=".MainApplication">
-<!--        <activity-->
-<!--            android:name=".ui.gallery.GalleryActivity"-->
-<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".ui.GalleryActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
