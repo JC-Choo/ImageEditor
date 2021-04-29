@@ -9,6 +9,10 @@ import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
+import dev.chu.core.util.ext.TAG
+import dev.chu.core.util.ext.click
+import dev.chu.core.util.ext.hasPermissions
+import dev.chu.core.util.ext.toast
 import dev.chu.imageeditor.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
