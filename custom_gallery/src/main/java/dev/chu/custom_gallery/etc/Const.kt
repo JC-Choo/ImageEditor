@@ -10,6 +10,8 @@ object Const {
     const val MEDIA = "MEDIA"
     const val MEDIA_LIST = "MEDIA_LIST"
 
+    const val IMAGE_BYTE_ARRAY = "IMAGE_BYTE_ARRAY"
+
     const val FOLDER_ORDER_RECENT = Long.MAX_VALUE
     const val FOLDER_ORDER_CAMERA = Long.MAX_VALUE-1
     const val FOLDER_ORDER_DOWNLOAD = Long.MAX_VALUE-2
