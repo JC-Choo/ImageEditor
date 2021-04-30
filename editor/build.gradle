@@ -57,6 +57,7 @@ dependencies {
 
     implementation "androidx.activity:activity-ktx:$activity_ktx_version"       // 액티비티 API 를 단순화한 것들을 적용하기 위한 라이브러리.
     implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"       // 프래그먼트 API 를 단순화한 것들을 적용하기 위한 라이브러리.
+
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
@@ -76,7 +77,4 @@ dependencies {
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_compiler_version"
-
-    // Paging
-    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 }
