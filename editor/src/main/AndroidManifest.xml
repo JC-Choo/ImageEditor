@@ -3,7 +3,9 @@
     package="dev.chu.editor">
 
     <application>
-        <activity android:name=".EditorActivity"/>
+        <activity
+            android:name=".ui.EditorActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

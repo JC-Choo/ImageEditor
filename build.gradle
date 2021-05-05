@@ -26,8 +26,7 @@ buildscript {
         dagger_version = "2.32"
         dagger_android_version = "2.31.2"
         dagger_android_processor_version = "2.30.1"
-        dagger_assisted_inject = "0.6.0"
-        navigation_version = "2.3.4"
+        navigation_version = "2.3.5"
         paging_version = "2.1.2"
     }
 
