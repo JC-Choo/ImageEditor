@@ -43,6 +43,7 @@ android {
 dependencies {
 
     implementation project(':core')
+    implementation project(':custom_gallery')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
@@ -66,7 +67,7 @@ dependencies {
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     implementation "com.google.dagger:dagger-android:$dagger_android_version"
-    implementation "com.google.dagger:dagger-android-support:$dagger_android_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_android_support_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_android_processor_version"
 
     // Design

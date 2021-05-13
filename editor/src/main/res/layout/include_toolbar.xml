@@ -12,53 +12,53 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:background="@{toolbarVM.backgroundColor}">
+        android:layout_height="52dp">
+<!--        android:background="@{toolbarVM.backgroundColor}">-->
 
-        <ImageView
-            android:id="@+id/leftImage"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_margin="8dp"
-            android:adjustViewBounds="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:imageDrawable="@{toolbarVM.leftImageDrawable}"
-            app:onClickEvent="@{toolbarVM.onClickLeft}"
-            tools:src="@drawable/close_000000" />
+<!--        <ImageView-->
+<!--            android:id="@+id/leftImage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:imageDrawable="@{toolbarVM.leftImageDrawable}"-->
+<!--            app:onClickEvent="@{toolbarVM.onClickLeft}"-->
+<!--            tools:src="@drawable/close_000000" />-->
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:maxLength="10"
-            android:text="@{toolbarVM.title}"
-            android:textColor="@{toolbarVM.titleColor}"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:onClickEvent="@{toolbarVM.onClickTitle}"
-            app:titleDrawableRight="@{toolbarVM.titleDrawableRight}"
-            tools:drawableEnd="@drawable/expand_more_000000"
-            tools:text="@string/all_picture" />
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:maxLength="10"-->
+<!--            android:text="@{toolbarVM.title}"-->
+<!--            android:textColor="@{toolbarVM.titleColor}"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:onClickEvent="@{toolbarVM.onClickTitle}"-->
+<!--            app:titleDrawableRight="@{toolbarVM.titleDrawableRight}"-->
+<!--            tools:drawableEnd="@drawable/expand_more_000000"-->
+<!--            tools:text="@string/all_picture" />-->
 
-        <ImageView
-            android:id="@+id/complete"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_margin="8dp"
-            android:adjustViewBounds="true"
-            app:imageDrawable="@{toolbarVM.rightImageDrawable}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:onClickEvent="@{toolbarVM.onClickRight}"
-            app:visible="@{toolbarVM.rightVisible}" />
+<!--        <ImageView-->
+<!--            android:id="@+id/complete"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            app:imageDrawable="@{toolbarVM.rightImageDrawable}"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:onClickEvent="@{toolbarVM.onClickRight}"-->
+<!--            app:visible="@{toolbarVM.rightVisible}" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

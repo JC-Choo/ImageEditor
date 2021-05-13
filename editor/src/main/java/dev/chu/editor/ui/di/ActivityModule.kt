@@ -1,4 +1,4 @@
-package dev.chu.editor.di
+package dev.chu.editor.ui.di
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

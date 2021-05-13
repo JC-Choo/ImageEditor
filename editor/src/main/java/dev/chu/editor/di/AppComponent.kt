@@ -5,6 +5,7 @@ import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import dev.chu.core.di.ViewModelModule
 import dev.chu.editor.MainApplication
+import dev.chu.editor.ui.di.ActivityModule
 import javax.inject.Singleton
 
 @Singleton
