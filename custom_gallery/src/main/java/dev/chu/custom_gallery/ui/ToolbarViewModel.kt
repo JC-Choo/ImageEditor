@@ -8,9 +8,10 @@ import androidx.databinding.Bindable
 import dev.chu.core.util.ext.getColorById
 import dev.chu.custom_gallery.BR
 import dev.chu.custom_gallery.R
+import javax.inject.Inject
 
-class ToolbarViewModel(
-    private val context: Context
+class ToolbarViewModel @Inject constructor(
+    context: Context
 ) : BaseObservable() {
 
     // left image

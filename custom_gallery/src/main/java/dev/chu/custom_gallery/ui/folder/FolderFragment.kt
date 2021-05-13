@@ -42,6 +42,11 @@ class FolderFragment: DaggerFragment() {
     private lateinit var sharedVM: GallerySharedViewModel
     private lateinit var adapter: FolderAdapter
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedVM = sharedViewModelProvider[GallerySharedViewModel::class.java]
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -55,7 +60,6 @@ class FolderFragment: DaggerFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        sharedVM = sharedViewModelProvider[GallerySharedViewModel::class.java]
         binding.viewModel = viewModel
         binding.toolbarVM = toolbarVM
 
@@ -72,7 +76,8 @@ class FolderFragment: DaggerFragment() {
     private fun setRecyclerView() {
         adapter = FolderAdapter()
 
-        binding.list.addItemDecoration(DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL))
+        val divider = DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
+        binding.list.addItemDecoration(divider)
         binding.list.adapter = adapter
         binding.list.setHasFixedSize(true)
     }

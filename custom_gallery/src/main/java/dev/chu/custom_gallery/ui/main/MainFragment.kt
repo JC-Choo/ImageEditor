@@ -43,12 +43,12 @@ class MainFragment: DaggerFragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding: FragmentMainBinding get() = _binding!!
 
-    private var sharedVM: GallerySharedViewModel? = null
-    private lateinit var adapter: MainAdapter
+    private lateinit var sharedVM: GallerySharedViewModel
+    private var adapter: MainAdapter? = null
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (sharedVM == null)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (!::sharedVM.isInitialized)
             sharedVM = sharedViewModelProvider[GallerySharedViewModel::class.java]
     }
 
@@ -82,13 +82,14 @@ class MainFragment: DaggerFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        adapter = null
         _binding = null
-        sharedVM = null
     }
 
     private fun setRecyclerView() {
         adapter = MainAdapter(viewModel)
         binding.list.adapter = adapter
+        binding.list.itemAnimator = null
         binding.list.setHasFixedSize(true)
     }
 
@@ -104,12 +105,12 @@ class MainFragment: DaggerFragment() {
     }
 
     private fun observeViewModel() {
-        sharedVM?.album?.observe(viewLifecycleOwner) {
+        sharedVM.album.observe(viewLifecycleOwner) {
             viewModel.setBucketId(it)
         }
 
         viewModel.itemsOfAlbum.observe(viewLifecycleOwner) {
-            adapter.submitList(it)
+            adapter?.submitList(it)
         }
 
         viewModel.selection.isUpThreeSelectedItem.observe(viewLifecycleOwner) {

@@ -22,7 +22,7 @@ class GalleryActivity : DaggerAppCompatActivity() {
 
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
-        navController.setGraph(R.navigation.nav_gallery)
+//        navController.setGraph(R.navigation.nav_gallery)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val dest = try {
                 resources.getResourceName(destination.id)
