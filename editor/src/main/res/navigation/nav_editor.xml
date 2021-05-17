@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/main"
-        android:name="dev.chu.editor.ui.main.MainFragment"
+        android:name="dev.chu.editor.ui.main.ui.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/edit"
-        android:name="dev.chu.editor.ui.edit.EditFragment"
+        android:name="dev.chu.editor.ui.edit.ui.EditFragment"
         android:label="EditFragment"
         tools:layout="@layout/fragment_edit" />
 </navigation>
