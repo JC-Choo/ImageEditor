@@ -8,6 +8,7 @@ import android.net.Uri
 import android.view.View
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
+import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide
 import java.io.ByteArrayOutputStream
 
@@ -88,4 +89,9 @@ fun ImageView.toByteArray(fromDegrees: Float): ByteArray {
         byteArr = stream.toByteArray()
     }
     return byteArr
+}
+
+inline fun <T : ViewDataBinding> T.executeAfter(block: T.() -> Unit) {
+    block.invoke(this)
+    executePendingBindings()
 }

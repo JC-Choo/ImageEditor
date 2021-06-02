@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/main"
         android:name="dev.chu.editor.ui.main.ui.MainFragment"
-        android:label="MainFragment"
+        android:label="Main"
         tools:layout="@layout/fragment_main">
 
         <action
@@ -19,6 +19,17 @@
     <fragment
         android:id="@+id/edit"
         android:name="dev.chu.editor.ui.edit.ui.EditFragment"
-        android:label="EditFragment"
-        tools:layout="@layout/fragment_edit" />
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit" >
+
+        <action
+            android:id="@+id/action_edit_to_crop"
+            app:destination="@id/crop" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/crop"
+        android:name="dev.chu.editor.ui.crop.CropFragment"
+        android:label="Crop"
+        tools:layout="@layout/fragment_crop" />
 </navigation>
