@@ -7,4 +7,14 @@
     <string name="save">저장</string>
     <string name="cancel">취소</string>
     <string name="ok">확인</string>
+
+    <string name="brightness">밝기</string>
+    <string name="crop">크롭</string>
+    <string name="rotation">회전</string>
+    <string-array name="rotation_type">
+        <item>왼쪽회전</item>
+        <item>오른쪽회전</item>
+        <item>좌우반전</item>
+        <item>상하반전</item>
+    </string-array>
 </resources>
