@@ -12,6 +12,7 @@ import dev.chu.core.util.ext.TAG
 import dev.chu.core.util.ext.isAndroid29
 import dev.chu.custom_gallery.entity.Media
 import dev.chu.custom_gallery.etc.Const
+import java.lang.IllegalArgumentException
 
 /**
  * 참고 싸이트 : https://codechacha.com/ko/android-jetpack-paging/
@@ -63,13 +64,11 @@ class LocalDataSource(
     }.toTypedArray()
 
     override fun loadInitial(params: LoadInitialParams, callback: LoadInitialCallback<Media>) {
-        Log.i(TAG, "loadInitial start: ${params.requestedStartPosition}, size: ${params.requestedLoadSize}")
         val data: MutableList<Media> = getMedias(params.requestedStartPosition, params.requestedLoadSize)
         callback.onResult(data, 0)
     }
 
     override fun loadRange(params: LoadRangeParams, callback: LoadRangeCallback<Media>) {
-        Log.i(TAG, "loadRange start: ${params.startPosition}, size: ${params.loadSize}")
         val data = getMedias(params.startPosition, params.loadSize, false)
         callback.onResult(data)
     }
@@ -89,50 +88,54 @@ class LocalDataSource(
 
         val orderBy = MediaStore.Files.FileColumns.DATE_MODIFIED
         val sortOrder = "$orderBy DESC LIMIT $loadSize OFFSET $startPosition"
-        val imageCursor = contentResolver.query(
-            contentUri,
-            projection,
-            selection,
-            selectionArgs.toTypedArray(),
-            sortOrder
-        )
+        try {
+            val imageCursor = contentResolver.query(
+                contentUri,
+                projection,
+                selection,
+                selectionArgs.toTypedArray(),
+                sortOrder
+            )
 
-        imageCursor?.let { cursor ->
-            if (cursor.moveToFirst()) {
-                do {
-                    val relativePath: String? = if (isAndroid29()) {
-                        cursor.getStringOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.RELATIVE_PATH))
-                    } else {
-                        null
-                    }
-                    items.add(
-                        Media(
-                        contentUri,
-                        cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID)),
-                        cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.DISPLAY_NAME)),
-                        relativePath,
-                        cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.MEDIA_TYPE)),
-                        cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.MIME_TYPE)),
-                        cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_MODIFIED)),
-                        cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_TAKEN)),
-                        cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_ADDED)),
-                        cursor.getIntOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.WIDTH)),
-                        cursor.getIntOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.HEIGHT)),
-                        cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.ORIENTATION)),
-                        cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.SIZE)),
-                        cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DURATION))
-                    )
-                    )
-                    imageCursor.moveToNext()
-                } while (imageCursor.moveToNext())
+            imageCursor?.let { cursor ->
+                if (cursor.moveToFirst()) {
+                    do {
+                        val relativePath: String? = if (isAndroid29()) {
+                            cursor.getStringOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.RELATIVE_PATH))
+                        } else {
+                            null
+                        }
+                        items.add(
+                            Media(
+                                contentUri,
+                                cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID)),
+                                cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.DISPLAY_NAME)),
+                                relativePath,
+                                cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.MEDIA_TYPE)),
+                                cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.MIME_TYPE)),
+                                cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_MODIFIED)),
+                                cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_TAKEN)),
+                                cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATE_ADDED)),
+                                cursor.getIntOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.WIDTH)),
+                                cursor.getIntOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.HEIGHT)),
+                                cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.ORIENTATION)),
+                                cursor.getInt(cursor.getColumnIndex(MediaStore.Files.FileColumns.SIZE)),
+                                cursor.getLongOrNull(cursor.getColumnIndex(MediaStore.Files.FileColumns.DURATION))
+                            )
+                        )
+                        imageCursor.moveToNext()
+                    } while (imageCursor.moveToNext())
+                }
             }
+
+            if (isInitial)
+                count.postValue(imageCursor?.count ?: 0)
+
+            imageCursor?.close()
+            return items
+        } catch (e: IllegalArgumentException) {
+            e.printStackTrace()
+            return items
         }
-
-        if (isInitial)
-            count.postValue(imageCursor?.count ?: 0)
-
-        imageCursor?.close()
-
-        return items
     }
 }
