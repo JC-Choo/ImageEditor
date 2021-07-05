@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
 INJECTED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
 INJECTED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
@@ -57,3 +58,62 @@ INJECTED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_e
 		INJECTED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml
 		ADDED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml
 		INJECTED from /Users/chu/AndroidStudioProjects/1_study/JicheolChoo-repos/image_editor/custom_gallery/src/main/AndroidManifest.xml
+=======
+ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+	package
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:4:5-37
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:7:5-8:40
+	tools:ignore
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:8:9-37
+	android:name
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:7:22-78
+application
+ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:10:5-14:19
+	android:name
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:10:18-49
+activity#dev.chu.custom_gallery.ui.GalleryActivity
+ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:11:9-13:52
+	android:screenOrientation
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:13:13-49
+	android:name
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml:12:13-47
+uses-sdk
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		ADDED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+		INJECTED from /Users/chu/AndroidStudioProjects/2_project/ImageEditor/custom_gallery/src/main/AndroidManifest.xml
+>>>>>>> 2c8d26c9d5a2da61238c7149d8d983540f1052af

@@ -1,10 +1,8 @@
 dev/chu/custom_gallery/ui/GallerySharedViewModel_Factory.java
  dev.chu.custom_gallery.ui.GallerySharedViewModel_Factory
  dev.chu.custom_gallery.ui.GallerySharedViewModel_Factory$InstanceHolder
-dev/chu/custom_gallery/ui/di/GalleryModule_MainFragment.java
- dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment
- dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment$MainFragmentSubcomponent
- dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment$MainFragmentSubcomponent$Factory
+dev/chu/custom_gallery/databinding/IncludeToolbarBindingImpl.java
+ dev.chu.custom_gallery.databinding.IncludeToolbarBindingImpl
 dev/chu/custom_gallery/ui/folder/di/FolderModule_Companion_ProvideToolbarViewModelFactory.java
  dev.chu.custom_gallery.ui.folder.di.FolderModule_Companion_ProvideToolbarViewModelFactory
 dev/chu/custom_gallery/databinding/IncludeToolbarBinding.java
@@ -23,8 +21,8 @@ dev/chu/custom_gallery/generated/callback/OnClickListener.java
  dev.chu.custom_gallery.generated.callback.OnClickListener$Listener
 dev/chu/custom_gallery/ui/folder/FolderFragment_MembersInjector.java
  dev.chu.custom_gallery.ui.folder.FolderFragment_MembersInjector
-dev/chu/custom_gallery/ui/main/data/MainRepositoryImpl_Factory.java
- dev.chu.custom_gallery.ui.main.data.MainRepositoryImpl_Factory
+dev/chu/custom_gallery/databinding/ItemGalleryBindingImpl.java
+ dev.chu.custom_gallery.databinding.ItemGalleryBindingImpl
 dev/chu/custom_gallery/databinding/ActivityGalleryBindingImpl.java
  dev.chu.custom_gallery.databinding.ActivityGalleryBindingImpl
 dev/chu/custom_gallery/databinding/FragmentMainBinding.java
@@ -39,10 +37,42 @@ dev/chu/custom_gallery/DataBinderMapperImpl.java
  dev.chu.custom_gallery.DataBinderMapperImpl$InnerLayoutIdLookup
 dev/chu/custom_gallery/databinding/FragmentFolderBinding.java
  dev.chu.custom_gallery.databinding.FragmentFolderBinding
-dev/chu/custom_gallery/ui/main/di/MainModule_Companion_ProvideToolbarViewModelFactory.java
- dev.chu.custom_gallery.ui.main.di.MainModule_Companion_ProvideToolbarViewModelFactory
+dev/chu/custom_gallery/databinding/ItemFolderBinding.java
+ dev.chu.custom_gallery.databinding.ItemFolderBinding
+dev/chu/custom_gallery/databinding/ItemFolderBindingImpl.java
+ dev.chu.custom_gallery.databinding.ItemFolderBindingImpl
+dev/chu/custom_gallery/databinding/FragmentFolderBindingImpl.java
+ dev.chu.custom_gallery.databinding.FragmentFolderBindingImpl
+dev/chu/custom_gallery/BR.java
+ dev.chu.custom_gallery.BR
+dev/chu/custom_gallery/DataBindingTriggerClass.java
+ dev.chu.custom_gallery.DataBindingTriggerClass
+dev/chu/custom_gallery/databinding/FragmentMainBindingImpl.java
+ dev.chu.custom_gallery.databinding.FragmentMainBindingImpl
+dev/chu/custom_gallery/databinding/ItemGalleryBinding.java
+ dev.chu.custom_gallery.databinding.ItemGalleryBinding
+dev/chu/custom_gallery/databinding/ActivityGalleryBinding.java
+ dev.chu.custom_gallery.databinding.ActivityGalleryBinding
+dev/chu/custom_gallery/ui/di/GalleryModule_FolderFragment.java
+ dev.chu.custom_gallery.ui.di.GalleryModule_FolderFragment
+ dev.chu.custom_gallery.ui.di.GalleryModule_FolderFragment$FolderFragmentSubcomponent
+ dev.chu.custom_gallery.ui.di.GalleryModule_FolderFragment$FolderFragmentSubcomponent$Factory
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+dev/chu/custom_gallery/BuildConfig.java
+ dev.chu.custom_gallery.BuildConfig
+dev/chu/custom_gallery/ui/di/GalleryModule_MainFragment.java
+ dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment
+ dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment$MainFragmentSubcomponent
+ dev.chu.custom_gallery.ui.di.GalleryModule_MainFragment$MainFragmentSubcomponent$Factory
+dev/chu/custom_gallery/di/ActivityModule_GalleryActivity.java
+ dev.chu.custom_gallery.di.ActivityModule_GalleryActivity
+ dev.chu.custom_gallery.di.ActivityModule_GalleryActivity$GalleryActivitySubcomponent
+ dev.chu.custom_gallery.di.ActivityModule_GalleryActivity$GalleryActivitySubcomponent$Factory
 dev/chu/custom_gallery/ui/main/di/MainModule_Companion_ProvideMainViewModelFactory.java
  dev.chu.custom_gallery.ui.main.di.MainModule_Companion_ProvideMainViewModelFactory
+dev/chu/custom_gallery/di/AppModule_ProvideContextFactory.java
+ dev.chu.custom_gallery.di.AppModule_ProvideContextFactory
 dev/chu/custom_gallery/di/DaggerAppComponent.java
  dev.chu.custom_gallery.di.DaggerAppComponent
  dev.chu.custom_gallery.di.DaggerAppComponent$1
@@ -57,8 +87,11 @@ dev/chu/custom_gallery/di/DaggerAppComponent.java
  dev.chu.custom_gallery.di.DaggerAppComponent$GalleryActivitySubcomponentImpl$MainFragmentSubcomponentImpl
 dev/chu/custom_gallery/ui/di/GalleryModule_Companion_ProvideGallerySharedViewModelProviderFactory.java
  dev.chu.custom_gallery.ui.di.GalleryModule_Companion_ProvideGallerySharedViewModelProviderFactory
+dev/chu/custom_gallery/di/AppModule_ProvideApplicationFactory.java
+ dev.chu.custom_gallery.di.AppModule_ProvideApplicationFactory
 dev/chu/custom_gallery/ui/main/MainFragment_MembersInjector.java
  dev.chu.custom_gallery.ui.main.MainFragment_MembersInjector
+<<<<<<< HEAD
 dev/chu/custom_gallery/ui/main/MainViewModel_Factory.java
  dev.chu.custom_gallery.ui.main.MainViewModel_Factory
 dev/chu/custom_gallery/databinding/FragmentMainBindingImpl.java
@@ -97,3 +130,11 @@ androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
 dev/chu/custom_gallery/databinding/IncludeToolbarBindingImpl.java
  dev.chu.custom_gallery.databinding.IncludeToolbarBindingImpl
+=======
+dev/chu/custom_gallery/ui/main/di/MainModule_Companion_ProvideToolbarViewModelFactory.java
+ dev.chu.custom_gallery.ui.main.di.MainModule_Companion_ProvideToolbarViewModelFactory
+dev/chu/custom_gallery/ui/main/MainViewModel_Factory.java
+ dev.chu.custom_gallery.ui.main.MainViewModel_Factory
+dev/chu/custom_gallery/ui/main/data/MainRepositoryImpl_Factory.java
+ dev.chu.custom_gallery.ui.main.data.MainRepositoryImpl_Factory
+>>>>>>> 2c8d26c9d5a2da61238c7149d8d983540f1052af
