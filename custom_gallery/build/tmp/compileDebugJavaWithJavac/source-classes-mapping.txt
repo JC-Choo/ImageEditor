@@ -59,10 +59,10 @@ dev/chu/custom_gallery/ui/di/GalleryModule_Companion_ProvideGallerySharedViewMod
  dev.chu.custom_gallery.ui.di.GalleryModule_Companion_ProvideGallerySharedViewModelProviderFactory
 dev/chu/custom_gallery/ui/main/MainFragment_MembersInjector.java
  dev.chu.custom_gallery.ui.main.MainFragment_MembersInjector
-dev/chu/custom_gallery/databinding/FragmentMainBindingImpl.java
- dev.chu.custom_gallery.databinding.FragmentMainBindingImpl
 dev/chu/custom_gallery/ui/main/MainViewModel_Factory.java
  dev.chu.custom_gallery.ui.main.MainViewModel_Factory
+dev/chu/custom_gallery/databinding/FragmentMainBindingImpl.java
+ dev.chu.custom_gallery.databinding.FragmentMainBindingImpl
 dev/chu/custom_gallery/databinding/ActivityGalleryBinding.java
  dev.chu.custom_gallery.databinding.ActivityGalleryBinding
 dev/chu/custom_gallery/ui/di/GalleryModule_FolderFragment.java

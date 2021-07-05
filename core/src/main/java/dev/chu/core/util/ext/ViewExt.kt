@@ -26,7 +26,7 @@ fun ImageView.toBitmap(degrees: Float = 0f): Bitmap {
 fun View.getBitmapFromView(): Bitmap? {
     val activity = this.context.findActivity()
     if (activity != null) {
-        val size = context.findActivity()?.windowManager?.currentWindowMetricsPointCompat() ?: return null
+        val size = context.currentWindowMetricsPointCompat()
 
         val x = size.x
         val y = size.y

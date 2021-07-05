@@ -1,13 +1,11 @@
 package dev.chu.core.util.ext
 
+import android.content.Context
 import android.content.res.Resources
-import android.graphics.Insets
 import android.graphics.Point
 import android.os.Build
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -27,31 +25,36 @@ val Int.DP
         Resources.getSystem().displayMetrics
     ).toInt()
 
-@Suppress("DEPRECATION")
-fun WindowManager.currentWindowMetricsPointCompat(): Point {
-    return if (isAndroid30()) {
-        val windowInsets = currentWindowMetrics.windowInsets
-        var insets: Insets = windowInsets.getInsets(WindowInsets.Type.navigationBars())
-        windowInsets.displayCutout?.run {
-            insets = Insets.max(
-                insets,
-                Insets.of(safeInsetLeft, safeInsetTop, safeInsetRight, safeInsetBottom)
-            )
-        }
-
-        val insetsWidth = insets.right + insets.left
-        val insetsHeight = insets.top + insets.bottom
-        Point(
-            currentWindowMetrics.bounds.width() - insetsWidth,
-            currentWindowMetrics.bounds.height() - insetsHeight
-        )
-    } else {
-        val display = defaultDisplay // deprecated in API 30
-        val size = Point()
-        display?.getSize(size) // deprecated in API 30
-        Point(size.x, size.y)
-    }
+fun Context.currentWindowMetricsPointCompat(): Point {
+    val size = Point()
+    display?.getRealSize(size)
+    return Point(size.x, size.y)
 }
+//@Suppress("DEPRECATION")
+//fun WindowManager.currentWindowMetricsPointCompat(): Point {
+//    return if (isAndroid30()) {
+//        val windowInsets = currentWindowMetrics.windowInsets
+//        var insets: Insets = windowInsets.getInsets(WindowInsets.Type.navigationBars())
+//        windowInsets.displayCutout?.run {
+//            insets = Insets.max(
+//                insets,
+//                Insets.of(safeInsetLeft, safeInsetTop, safeInsetRight, safeInsetBottom)
+//            )
+//        }
+//
+//        val insetsWidth = insets.right + insets.left
+//        val insetsHeight = insets.top + insets.bottom
+//        Point(
+//            currentWindowMetrics.bounds.width() - insetsWidth,
+//            currentWindowMetrics.bounds.height() - insetsHeight
+//        )
+//    } else {
+//        val display = defaultDisplay // deprecated in API 30
+//        val size = Point()
+//        display?.getSize(size) // deprecated in API 30
+//        Point(size.x, size.y)
+//    }
+//}
 
 // navigation component 를 위한 extension
 fun Fragment.findNavControllerSafely(): NavController? {

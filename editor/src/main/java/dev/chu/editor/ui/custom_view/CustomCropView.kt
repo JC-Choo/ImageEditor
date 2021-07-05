@@ -13,11 +13,11 @@ import dev.chu.core.util.ext.currentWindowMetricsPointCompat
 import dev.chu.core.util.ext.findActivity
 import dev.chu.core.util.ext.getScaleOfScreen
 import dev.chu.core.util.ext.toast
-import dev.chu.editor.etc.CropType
 import dev.chu.editor.R
 import dev.chu.editor.data.DrawPoint
 import dev.chu.editor.data.DrawRegion
 import dev.chu.editor.etc.Const
+import dev.chu.editor.etc.CropType
 import java.io.ByteArrayOutputStream
 import kotlin.math.abs
 
@@ -96,8 +96,8 @@ class CustomCropView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas?) {
 //        super.onDraw(canvas)
         if (scaledBitmap != null) {
-            val left = (context.findActivity()!!.windowManager.currentWindowMetricsPointCompat().x - scaledBitmap!!.width)/2f
-            val top = (context.findActivity()!!.windowManager.currentWindowMetricsPointCompat().y - scaledBitmap!!.height)/2f    // top 의 높이 설정(전체 사이즈의 height 의 반 - scaledBitmap 의 height 의 반
+            val left = (context.currentWindowMetricsPointCompat().x - scaledBitmap!!.width)/2f
+            val top = (context.currentWindowMetricsPointCompat().y - scaledBitmap!!.height)/2f    // top 의 높이 설정(전체 사이즈의 height 의 반 - scaledBitmap 의 height 의 반
             canvas?.drawBitmap(scaledBitmap!!, left, top, null)
         }
 
@@ -237,7 +237,7 @@ class CustomCropView @JvmOverloads constructor(
      * crop 된 이미지를 bitmap 으로 가져오는 함수
      */
     fun getCroppedBitmapImage(bitmap: Bitmap): Bitmap? {
-        val screenSize = context.findActivity()?.windowManager?.currentWindowMetricsPointCompat() ?: return null
+        val screenSize = context.currentWindowMetricsPointCompat()
         return Bitmap.createBitmap(screenSize.x, screenSize.y, bitmap.config).apply {
             val canvas = Canvas(this)
             val paint = Paint()
